@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejercicio 3</title>
+  <style>
+.sky{
+position: relative;
+height: 26rem;
+max-width: 100%;
+background-color: skyblue;
+  }
+.sky__sun{
+position: absolute;
+top: 30;
+left: 6rem;
+animation: aparecer_sol 1.5s;
+}
+@keyframes aparecer_sol{
+0%{ opacity: 0;}
+100%{ opacity: 1;}
+}
+
+.sky__text{
+position: absolute;
+top: 8rem;
+left: -2rem;
+padding: 0 10rem;
+animation: aparecer_texto 1s;
+}
+
+@keyframes aparecer_texto{
+0% { opacity: 0;}
+50%{ opacity: 0;}
+100%{ opacity: 1;}
+}
+
+.sky__text-title{
+margin: 2rem 0 0 0;
+font-family: monospace;
+font-weight: bold;
+font-size: 3em;
+color: white;
+}
+.sky__text-subtitle{
+margin: 0;
+color: white;
+}
+
+.beachsand{
+height: 10rem;
+max-width: 100%;
+background-color: sandybrown;
+position: relative;
+}
+
+.beachsand__people{
+position: absolute;
+bottom: 0;
+right: 10rem;
+}
+
+.beachsand__ball{
+position: absolute;
+right: 8rem;
+-webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.beachsand__umbrella{
+position: absolute;
+left: 90;
+top: -1rem;
+-webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.beachsand__tree{
+position: absolute;
+top: -7rem;
+left: 40rem;
+animation: aparecer_palmera 2s ;
+}
+@keyframes aparecer_palmera{
+0% { opacity: 0;}
+50% { opacity: 0;}
+100%{ opacity: 1;}
+}
+
+  </style>
+</head>
+<body>
+<div class="sky">
+  <svg class="sky__sun" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  	 width="150px" height="150px" viewbox="0 0 500 500" style="enable-background:new 0 0 420 420;" xml:space="preserve">
+  <g>
+  	<polygon style="fill:#F5C525;" points="420,210 375.774,247.857 399.238,301.145 342.926,315.986 340.945,374.184 283.764,363.211
+  		256.724,414.779 210,380 163.276,414.779 136.236,363.211 79.055,374.184 77.073,315.986 20.762,301.144 44.226,247.858 0,210
+  		44.226,172.143 20.762,118.855 77.074,104.014 79.055,45.816 136.236,56.789 163.276,5.221 210,40 256.723,5.221 283.764,56.789
+  		340.945,45.816 342.927,104.014 399.238,118.856 375.774,172.142 	"/>
+  	<circle style="fill:#F8A805;" cx="210" cy="210" r="140"/>
+  </g>
+</svg>
+
+  <div class="sky__text">
+    <h1 class="sky__text-title">Vive el verano</h1>
+    <p class="sky__text-subtitle">Con la proteccion del bloqueador Solar número 1 de Chile podrás tener un verano protegido junto a toda tu familia</p>
+  </div>
+</div>
+
+<div class="beachsand">
+  <svg class="beachsand__umbrella" xmlns="http://www.w3.org/2000/svg" width="150px" viewbox="0 0 512 512">
+      <g fill="#ef495b">
+  			<path d="M255.23 414.029l88.641-222.402c3.709-9.306 14.26-13.844 23.566-10.135 9.306 3.709 13.844 14.26 10.135 23.566l-84.653 212.396-37.689-3.425z" fill="#90a4ae"/>
+  			<path d="M290.171 220.482l.027-.063-.026.004-.001.059z" fill="#fff9c5"/>
+  			<path d="M399.536 100.961l-66.884 7.189-42.481 49.475.007 62.783.03-.012-.01.022c18.552-3.445 39.208-1.638 59.202 6.331 19.867 7.918 36.018 20.704 47.109 35.837l.194.354 34.942-34.596 3.898-86.328-36.007-41.055z" fill="#fff9c5"/>
+  			<path d="M290.178 220.409c-11.098-15.259-27.334-28.156-47.327-36.125-20.003-7.973-40.671-9.778-59.228-6.327 0 0 90.046-127.161 215.914-76.995 0 0-66.007 17.655-109.365 119.521l.006-.074z"/>
+  			<path d="M396.749 262.884c18.552-3.443 39.208-1.636 59.202 6.333 20.003 7.973 36.247 20.878 47.342 36.148 0 0 22.11-154.238-103.758-204.405 0 0 35.767 58.218-2.831 161.98l.045-.056z"/>
+      </g>
+  </svg>
+
+  <svg class="beachsand__tree" xmlns="http://www.w3.org/2000/svg" width="150px" viewbox="0 0 59 59">
+  	<g>
+  		<path d="M30.34 17.966c-.114.009-.224.034-.34.034a3.963 3.963 0 0 1-2.52-.917c.319.57.52 1.215.52 1.917 0 .6-.1 1.164-.378 1.675C29.698 31.774 32.325 51.675 26 58h14s-.39-26.086-9.66-40.034z" fill="#805333"/>
+      <circle cx="30" cy="14" r="4" fill="#cbb292"/>
+      <path d="M36.856 5.684c-3.486.934-6.354 2.7-8.138 4.545A3.954 3.954 0 0 1 30 10a3.985 3.985 0 0 1 3.772 2.722l3.188-.854.931-2.32 1.967 1.544L50 8.374c-.715-2.667-6.742-4.405-13.144-2.69z" fill="#4fba6f"/>
+      <path d="M27.563 10.849c-.86-2.6-3.409-5.828-7.19-8.117C14.703-.699 8.43-.71 7 1.652l8.983 5.437 2.319-.934.248 2.488 7.531 4.558a3.982 3.982 0 0 1 1.482-2.352z" fill="#4c8056"/>
+      <path d="M26 14c0-.33.051-.646.127-.953-2.019-1.85-7.016-2.771-12.271-1.362C7.454 13.4 3.103 17.918 3.818 20.586l10.142-2.718.931-2.32 1.967 1.544 4.737-1.269A3.957 3.957 0 0 1 24 15c.165 0 .322.029.482.049l1.581-.424A4.023 4.023 0 0 1 26 14z" fill="#4fba6f"/>
+      <path d="M26.501 15.902A3.956 3.956 0 0 0 24 15a4 4 0 1 0 4 4c0-.692-.192-1.334-.501-1.902a3.986 3.986 0 0 1-.998-1.196z" fill="#7f6e5d"/>
+  	</g>
+  </svg>
+
+  <svg class="beachsand__people" xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewbox="0 0 512 512">
+      <path d="M445.573 415.248H241V194.381h173.213l16.706 65.99C462.381 274.999 483 306.834 483 342c0 27.233-12.135 52.707-33.294 69.892l-4.133 3.356z" fill="#331d17"/>
+      <path d="M62.294 411.892C41.135 394.707 29 369.233 29 342c0-35.166 20.619-67.001 52.081-81.629l16.706-65.99H256v220.867H66.427l-4.133-3.356z" fill="#5b3227"/>
+      <path d="M396 210h-22.79l.318-85H396c23.435 0 42.5 19.065 42.5 42.5S419.435 210 396 210z" fill="#bf4e2e"/>
+      <path d="M396 155v16.91c0 77.2-62.8 140-140 140l-40-282L396 155z" fill="#cf6446"/>
+      <path d="M256 19.91v292c-77.2 0-140-62.8-140-140 0 0 15.855-152 140-152z" fill="#d97a5f"/>
+      <path d="M483 477v35h-60l-217-40 50-130h92c74.44 0 135 60.56 135 135z" fill="#cf6446"/>
+      <path d="M256 342v140L89 512H29v-35c0-74.44 60.56-135 135-135h92z" fill="#d97a5f"/>
+      <path d="M348 402h-92l-50 70 187 40h30v-35c0-41.36-33.65-75-75-75z" fill="#71b04a"/>
+      <path d="M164 402c-41.35 0-75 33.64-75 75v35h30l137-80v-30h-92z" fill="#82cc56"/>
+      <path d="M396 140v15h-85c-23.82 0-44.96-14.1-54.55-35H256l-30-60 30-60c77.2 0 140 62.8 140 140z" fill="#331d17"/>
+      <path d="M116 140v32h30v-32c0-39.152 20.564-73.586 51.455-93.084A59.912 59.912 0 0 0 196 60c0 33.08 26.92 60 60 60V0c-77.196 0-140 62.804-140 140z" fill="#5b3227"/>
+      <path d="M393 477v35H256l-50-40 50-40h92c24.81 0 45 20.19 45 45z" fill="#82cc56"/>
+      <path d="M256 432v80H119v-35c0-24.81 20.19-45 45-45h92z" fill="#9ce072"/>
+      <path d="M158.15 142.5c6.08 10.53 5.04 23.22-1.62 32.5 6.66 9.28 7.7 21.97 1.62 32.5-6.09 10.53-17.59 15.98-28.96 14.85-4.71 10.41-15.17 17.65-27.34 17.65l-34.67-65 34.67-65c12.17 0 22.63 7.24 27.34 17.65 11.37-1.13 22.87 4.32 28.96 14.85z" fill="#ffd640"/>
+      <path d="M101.85 110v130c-12.16 0-22.62-7.24-27.33-17.65-11.37 1.13-22.87-4.32-28.96-14.85-6.08-10.53-5.04-23.22 1.62-32.5-6.66-9.28-7.7-21.97-1.62-32.5 6.09-10.53 17.59-15.98 28.96-14.85C79.23 117.24 89.69 110 101.85 110z" fill="#fff666"/>
+      <path d="M101.855 137.5l-17.5 37.5 17.5 37.5c20.711 0 37.5-16.789 37.5-37.5s-16.789-37.5-37.5-37.5z" fill="#fff0eb"/>
+      <path d="M64.355 175c0 20.711 16.789 37.5 37.5 37.5v-75c-20.711 0-37.5 16.789-37.5 37.5z" fill="#fff"/>
+      <circle cx="101.86" cy="175" r="15" fill="#82cc56"/>
+  </svg>
+
+  <svg class="beachsand__ball" height="102pt" viewbox="0 0 511 511.91" width="60px" xmlns="http://www.w3.org/2000/svg">
+    <!--  Icon made by Freepik from www.flaticon.com  -->
+    <path d="M420.117 59.145a253.804 253.804 0 0 0-118.73-55.172h-.176A249.582 249.582 0 0 0 256.457 0C146.836-.066 49.363 69.742 14.137 173.55l-.086.09a256.218 256.218 0 0 0 11.387 192.704v.09c45.207 94.445 143.375 151.843 247.855 144.914 104.48-6.934 194.207-76.793 226.543-176.383 32.336-99.59.762-208.836-79.719-275.82zm0 0" fill="#ff5364"/>
+    <g fill="#f3d55b">
+      <path d="M499.656 335.977c-28.047 85.218-98.636 149.55-186.086 169.578v-.086a476.518 476.518 0 0 1-89.687-216.895c-7.594-56.496-10.418-93.219-11.39-116.699a72.146 72.146 0 0 0 16.948-7.152 70.48 70.48 0 0 0 32.047-38.84h.086c30.723 7.855 84.04 29.66 148.48 88.187a367.391 367.391 0 0 1 89.512 121.907zm0 0M420.117 59.145c-92.601-12.977-143.27-.442-169.754 12.89a57.958 57.958 0 0 0-40.96-17.48C222.558 23.57 263.515 9.977 301.21 3.973h.176a253.804 253.804 0 0 1 118.73 55.172zm0 0M147.7 153.602a571.82 571.82 0 0 0-82.098 88.449 204.83 204.83 0 0 0-40.165 124.293A256.218 256.218 0 0 1 14.052 173.64l.086-.09c51.113-63.207 94.457-70.973 123.675-64.531a53.37 53.37 0 0 0 5.649 38.312 43.27 43.27 0 0 0 4.238 6.27zm0 0"/>
+    </g>
+  </svg>
+</div>
+</body>
+</html>
